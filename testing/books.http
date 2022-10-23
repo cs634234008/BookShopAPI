@@ -1,0 +1,23 @@
+GET http://localhost:3000/api/v2/books HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5vbzQiLCJwYXNzd29yZCI6IiQyYSQxMCQuSlk3YlZNbGZrcFhkN21DL0VlQk0uRVdYMXFqZjJoTy5LdE9qaFkvUndSTmUyZE94TWxMYSIsImlhdCI6MTY2NTYzNzE5NX0.0HImJfXnfBeYfIJiojx-OJoTpUBDWaWGdGZ70d9S5sg
+
+### -------- Get Book by Book Id
+GET http://localhost:3000/api/v2/books/3 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5vbzQiLCJwYXNzd29yZCI6IiQyYSQxMCQuSlk3YlZNbGZrcFhkN21DL0VlQk0uRVdYMXFqZjJoTy5LdE9qaFkvUndSTmUyZE94TWxMYSIsImlhdCI6MTY2NTYzNzE5NX0.0HImJfXnfBeYfIJiojx-OJoTpUBDWaWGdGZ70d9S5sg
+
+
+### -------- UPLOAD Book Cover Picture
+POST http://localhost:3000/api/v2/books/cover/2 HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5vbzQiLCJwYXNzd29yZCI6IiQyYSQxMCQuSlk3YlZNbGZrcFhkN21DL0VlQk0uRVdYMXFqZjJoTy5LdE9qaFkvUndSTmUyZE94TWxMYSIsImlhdCI6MTY2NTYzNzE5NX0.0HImJfXnfBeYfIJiojx-OJoTpUBDWaWGdGZ70d9S5sg
+
+--boundary
+Content-Disposition: form-data; name="book_cover"; filename="book_upload_cover_picture.jpg"
+Content-Type: image/jpeg
+
+< book_upload_cover_picture.jpg
+--boundary--
+
+###
